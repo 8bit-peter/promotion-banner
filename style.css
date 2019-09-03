@@ -231,6 +231,10 @@
     animation: fadeOut .2s;
 }
 
+.step2 .presentBox {
+    display: none;
+}
+
 .step2 .text--step2,
 .step2 .punkciaki {
     opacity: 1;
