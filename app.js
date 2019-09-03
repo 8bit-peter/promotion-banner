@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function shakeEventDidOccur () {
         main.classList.add('step1');
-        setTimeout(function(){ main.classList.add('step2'); }, 5000);
+        setTimeout(function(){ main.classList.add('step2'); }, 6000);
     }
     
 });
