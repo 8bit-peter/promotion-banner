@@ -36,9 +36,15 @@
     width: 100%;
     top: 0;
     opacity: 0;
+}
+
+.text--initial {
     animation: fadeIn ease-in-out .3s 1s forwards;
 }
 
+.text--step1 {
+    opacity: 0;
+}
 
 /* presentBox */
 .presentBox {
@@ -102,8 +108,51 @@
     opacity: 0;
 }
 
-.step1 .bg--step1 {
+.step1 .text--initial,
+.step1 .hand,
+.step1 .punkciak {
+    opacity: 0;
+    animation: fadeOut .2s;
+}
+
+.step1 .bg--step1,
+.step1 .text--step1 {
     opacity: 1;
+}
+
+.step1 .text--step1 {
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* present */
+.step1 .presentBox {
+    transition: .4s;
+}
+
+.step1 .presentBox--bp {
+    left: 6%;
+    top: 45%;
+}
+
+.step1 .presentBox--multikino {
+    right: 6%;
+    top: 45%;
+}
+
+.step1 .presentBox--bp .presentBox__item--top {
+    transition: .5s .5s;
+    transform: translate3d(-50vw, -30vh, 0) rotate(-90deg);
+}
+
+.step1 .presentBox--multikino .presentBox__item--top {
+    transition: .5s .5s;
+    transform: translate3d(50vw, -30vh, 0) rotate(90deg);
+}
+
+.step1 .presentBox__item--text {
+    animation: fadeIn ease-in-out .3s 2s forwards;
 }
 
 /* ===================================== step 1 ===================================== */
@@ -120,6 +169,11 @@
     from {opacity: 0}
     to {opacity: 1}
 }
+
+@keyframes fadeOut {
+    from {opacity: 1}
+    to {opacity: 0}
+  }
 
 @keyframes slideTop {
     0% {transform: translate3d(0, -100vh, 0)}
