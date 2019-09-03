@@ -17,7 +17,7 @@
     height: 100%;
     width: 100%;
     z-index: -1;
-    transition: .4s;
+    /* transition: .4s; */
 }
 
 .bg--step1 {
@@ -134,6 +134,9 @@
 .step1 .punkciak {
     opacity: 0;
     animation: fadeOut .2s;
+}
+.step1 .bg--step1 {
+    transition: .2s;
 }
 
 .step1 .bg--step1,
