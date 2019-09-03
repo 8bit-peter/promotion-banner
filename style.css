@@ -76,7 +76,8 @@
 .punkciak {
     opacity: 0;
     position: absolute;
-    width: 40%;
+    max-width: 40%;
+    width: 100%;
     left: 5%;
     bottom: 25%;
     animation: fadeIn ease-in-out .3s 1s forwards;
