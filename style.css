@@ -97,7 +97,7 @@
     max-width: 75%;
     left: 50%;
     bottom: 25%;
-    transform: translateX(-50%)
+    transform: translateX(-50%) scale(0);
 }
 
 .hand {
@@ -119,7 +119,18 @@
     top: 0;
     background: url("img/confetti.png");
     background-size: 100%;
-  }
+}
+
+.confetti--2 {
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    bottom: 45%;
+    background: url("img/confetti.png");
+    background-size: 100%;
+    transform: scale(0);
+}
 
 /* ===================================== initial ===================================== */
 
@@ -127,6 +138,7 @@
 
 .step1 .bg--initial {
     opacity: 0;
+    transition: .4s;
 }
 
 .step1 .text--initial,
@@ -190,14 +202,11 @@
 
 .step2 .bg--initial {
     opacity: 1;
+    transition: 0s;
 }
 
 .step2 .confetti,
-.step2 .bg--step1 {
-    opacity: 0;
-    animation: none;
-}
-
+.step2 .bg--step1,
 .step2 .text--step1,
 .step2 .presentBox {
     opacity: 0;
@@ -207,6 +216,18 @@
 .step2 .text--step2,
 .step2 .punkciaki {
     opacity: 1;
+}
+
+.step2 .punkciaki {
+    transition: .5s;
+    transform: translateX(-50%) scale(1);
+    animation: pulse 1s .3s infinite;
+}
+
+.step2 .confetti--2 {
+    opacity: 1;
+    transition: .7s;
+    transform: scale(1);
 }
 
 /* ===================================== step 2 ===================================== */
@@ -238,6 +259,11 @@
 @keyframes confettiFall--1 {
     0% {transform: translate3d(0, -40vh, 0)}
     100% {transform: translate3d(0, 20vh, 0)}
+}
+
+@keyframes pulse {
+    0% {transform: translateX(-50%) scale(1);}
+    50% {transform: translateX(-50%) scale(1.1);}
 }
 
 /* ===================================== animations ===================================== */
