@@ -42,7 +42,8 @@
     animation: fadeIn ease-in-out .3s 1s forwards;
 }
 
-.text--step1 {
+.text--step1,
+.text--step2 {
     opacity: 0;
 }
 
@@ -167,16 +168,31 @@
 
 .step1 .confetti {
     opacity: 1;
-    animation: confettiFall--1 ease-in 5.5s 0s forwards;
+    animation: confettiFall--1 ease-in 5s 0s forwards;
 }
 
 /* ===================================== step 1 ===================================== */
 
 /* ===================================== step 2 ===================================== */
 
-.step2 .confetti {
+.step2 .bg--initial {
+    opacity: 1;
+}
+
+.step2 .confetti,
+.step2 .bg--step1 {
     opacity: 0;
     animation: none;
+}
+
+.step2 .text--step1,
+.step2 .presentBox {
+    opacity: 0;
+    animation: fadeOut .2s;
+}
+
+.step2 .text--step2 {
+    opacity: 1;
 }
 
 /* ===================================== step 2 ===================================== */
