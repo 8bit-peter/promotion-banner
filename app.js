@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    alert('działa')
 
     const shakeEvent = new Shake();
 
@@ -11,6 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function shakeEventDidOccur () {
         //put your own code here etc.
         alert('shake!');
-        shakeEvent.stop();
     }
+    
 });
