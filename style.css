@@ -39,9 +39,13 @@
     animation: fadeIn ease-in-out .3s 1s forwards;
 }
 
+
+/* presentBox */
 .presentBox {
     position: absolute;
     width: 40%;
+    transform: translateY(-100vh);
+    animation: slideTop ease-in .5s forwards;
 }
 
 .presentBox--bp {
@@ -65,12 +69,29 @@
 }
 
 .presentBox__item--text {
-
+    opacity: 0;
 }
 
-.presentBox__item--body {
-
+/* punkciak */
+.punkciak {
+    opacity: 0;
+    position: absolute;
+    width: 40%;
+    left: 5%;
+    bottom: 25%;
+    animation: fadeIn ease-in-out .3s 1s forwards;
 }
+
+.hand {
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+    width: 20%;
+    left: 40%;
+    bottom: 10%;
+    transform-origin: 50% 80%;
+    animation: fadeIn ease-in-out .3s 2s forwards, rotate linear .5s 2.5s;
+  }
 
 /* ===================================== initial ===================================== */
 
@@ -83,7 +104,6 @@
 .step1 .bg--step1 {
     opacity: 1;
 }
-
 
 /* ===================================== step 1 ===================================== */
 
@@ -98,6 +118,18 @@
 @keyframes fadeIn {
     from {opacity: 0}
     to {opacity: 1}
+}
+
+@keyframes slideTop {
+    0% {transform: translate3d(0, -100vh, 0)}
+    100% {transform: translate3d(0, 0, 0)}
+}
+
+@keyframes rotate {
+    0% {transform: rotate(0deg)}
+    33% {transform: rotate(25deg)}
+    66% {transform: rotate(-25deg)}
+    100% {transform: rotate(0deg)}
   }
 
 /* ===================================== animations ===================================== */
