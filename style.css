@@ -193,7 +193,7 @@
 
 .step1 .confetti {
     opacity: 1;
-    animation: confettiFall--1 ease-in 6.5s 0s forwards;
+    animation: confettiFall--1 ease-in 6s 0s forwards;
 }
 
 /* ===================================== step 1 ===================================== */
