@@ -90,6 +90,16 @@
     animation: fadeIn ease-in-out .3s 1s forwards;
 }
 
+.punkciaki {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    max-width: 75%;
+    left: 50%;
+    bottom: 25%;
+    transform: translateX(-50%)
+}
+
 .hand {
     opacity: 0;
     z-index: 2;
@@ -163,12 +173,12 @@
 }
 
 .step1 .presentBox__item--text {
-    animation: fadeIn ease-in-out .3s 2s forwards;
+    animation: fadeIn ease-in-out .3s 1.5s forwards;
 }
 
 .step1 .confetti {
     opacity: 1;
-    animation: confettiFall--1 ease-in 6s 0s forwards;
+    animation: confettiFall--1 ease-in 6.5s 0s forwards;
 }
 
 /* ===================================== step 1 ===================================== */
@@ -191,7 +201,8 @@
     animation: fadeOut .2s;
 }
 
-.step2 .text--step2 {
+.step2 .text--step2,
+.step2 .punkciaki {
     opacity: 1;
 }
 
