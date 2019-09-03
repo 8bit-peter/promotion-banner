@@ -39,6 +39,38 @@
     animation: fadeIn ease-in-out .3s 1s forwards;
 }
 
+.presentBox {
+    position: absolute;
+    width: 40%;
+}
+
+.presentBox--bp {
+    left: 6%;
+    top: 25%;
+}
+
+.presentBox--multikino {
+    right: 6%;
+    top: 45%;
+}
+
+.presentBox__item {
+    position: absolute;
+    width: 100%;
+}
+
+.presentBox__item--top {
+    z-index: 2;
+}
+
+.presentBox__item--text {
+
+}
+
+.presentBox__item--body {
+
+}
+
 /* ===================================== initial ===================================== */
 
 /* ===================================== step 1 ===================================== */
