@@ -231,7 +231,9 @@
     animation: fadeOut .2s;
 }
 
-.step2 .presentBox {
+.step2 .presentBox,
+.step2 .presentBox--multikino .presentBox__item--top,
+.step2 .presentBox--bp .presentBox__item--top {
     display: none;
 }
 
