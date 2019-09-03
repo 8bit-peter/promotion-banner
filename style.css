@@ -98,6 +98,16 @@
     bottom: 10%;
     transform-origin: 50% 80%;
     animation: fadeIn ease-in-out .3s 2s forwards, rotate linear .5s 2.5s;
+}
+
+.confetti {
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    top: 0;
+    background: url("img/confetti.png");
+    background-size: 100%;
   }
 
 /* ===================================== initial ===================================== */
@@ -155,11 +165,19 @@
     animation: fadeIn ease-in-out .3s 2s forwards;
 }
 
+.step1 .confetti {
+    opacity: 1;
+    animation: confettiFall--1 ease-in 4s 0s forwards;
+}
+
 /* ===================================== step 1 ===================================== */
 
 /* ===================================== step 2 ===================================== */
 
-
+.step2 .confetti {
+    opacity: 0;
+    animation: none;
+}
 
 /* ===================================== step 2 ===================================== */
 
@@ -185,6 +203,11 @@
     33% {transform: rotate(25deg)}
     66% {transform: rotate(-25deg)}
     100% {transform: rotate(0deg)}
-  }
+}
+
+@keyframes confettiFall--1 {
+    0% {transform: translate3d(0, -40vh, 0)}
+    100% {transform: translate3d(0, 10vh, 0)}
+}
 
 /* ===================================== animations ===================================== */
